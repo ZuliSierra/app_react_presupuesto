@@ -12,6 +12,7 @@ const ExpenseList = () => {
               <th scope="col">Department</th>
               <th scope="col">Allocated Budget</th>
               <th scope="col">Increase by 10</th>
+              <th scope="col">Decrease by 10</th>
               <th scope="col">Delete</th>
             </tr>
           </thead>
@@ -20,6 +21,12 @@ const ExpenseList = () => {
                 <ExpenseItem id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} />
             ))}
             </tbody>
+            <tbody>
+            {expenses.map((decexpense) => (
+                <ExpenseItem id={decexpense.id} key={decexpense.id} name={decexpense.name} cost={decexpense.cost} />
+            ))}
+            </tbody>
+            
         </table>
     );
 };
